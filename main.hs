@@ -1,5 +1,6 @@
 finalGrade::[Int] -> [Int] -> Int
 finalGrade grades weights
-	numer/denom
+	let numerList = [x*y | x <- grades, y <- weights]
+	let numerInt = sum (numerList)
+	numerInt/denom
 	where denom = sum (weights)
-	where numer = (*) grades weights
